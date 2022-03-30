@@ -1,7 +1,7 @@
 import { FC, Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 
-import logoCraftWorkers from '../assets/img/logo.jpg'
+import logoCraftWorkers from '../assets/img/logo.png'
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
