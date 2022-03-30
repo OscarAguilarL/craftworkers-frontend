@@ -1,7 +1,9 @@
+import { useEffect } from 'react'
 import Aos from 'aos'
 
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+
+import { Navigation } from './components/Navigation'
 
 function App() {
   useEffect(() => {
@@ -9,9 +11,9 @@ function App() {
   })
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="bg-gray-200 w-screen h-screen">
+      <Navigation />
+    </div>
   )
 }
 
