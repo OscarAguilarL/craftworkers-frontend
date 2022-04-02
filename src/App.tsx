@@ -3,7 +3,7 @@ import Aos from 'aos'
 
 import 'aos/dist/aos.css'
 
-import { Navigation } from './components/Navigation'
+import { Navigation } from './components'
 
 function App() {
   useEffect(() => {
