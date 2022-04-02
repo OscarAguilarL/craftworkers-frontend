@@ -12,7 +12,7 @@ export const Navigation: FC = () => {
   const [isLoggedIn] = useState(false)
 
   return (
-    <nav className="bg-white">
+    <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-2 py-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start">

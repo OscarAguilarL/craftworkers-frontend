@@ -11,7 +11,7 @@ function App() {
   })
 
   return (
-    <div className="bg-gray-200 w-screen h-screen">
+    <div className="bg-gradient-to-b from-orange-50 w-screen h-screen">
       <Navigation />
     </div>
   )
