@@ -6,7 +6,7 @@ import three from '../assets/img/3.png'
 
 export const Tutorial: FC = () => {
   return (
-    <section className="container mx-auto px-32 mt-64">
+    <section className="container mx-auto px-32 mt-64 pb-24">
       <h2 className="text-4xl font-bold mb-20">
         Buscar alguien para reparar tu hogar <br />
         Nunca fue así de facil.
