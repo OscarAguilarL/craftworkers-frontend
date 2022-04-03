@@ -8,7 +8,7 @@ export const LoginPage = () => {
           Inicia <span className="text-red-600">Sesión</span>
         </h3>
         <input
-          type="text"
+          type="email"
           className="w-full h-12 rounded-lg px-4 text-lg bg-gray-100 focus:ring-blue-600 mb-4"
           placeholder="Email"
         />
@@ -23,12 +23,14 @@ export const LoginPage = () => {
 
         <label className="text-gray-800 mb-4">Ó inicia sesión con</label>
 
-        <button className="w-full h-12 rounded-lg bg-red-600 uppercase font-semibold hover:bg-red-700 text-gray-100 transition mb-4">
-          Google
-        </button>
-        <button className="w-full h-12 rounded-lg bg-blue-600 uppercase font-semibold hover:bg-blue-700 text-gray-100 transition mb-4">
-          Facebook
-        </button>
+        <div className="w-full flex gap-4">
+          <button className="w-full h-12 rounded-lg bg-red-600 uppercase font-semibold hover:bg-red-700 text-gray-100 transition mb-4">
+            Google
+          </button>
+          <button className="w-full h-12 rounded-lg bg-blue-600 uppercase font-semibold hover:bg-blue-700 text-gray-100 transition mb-4">
+            Facebook
+          </button>
+        </div>
       </div>
     </div>
   )
