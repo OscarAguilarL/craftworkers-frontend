@@ -3,7 +3,7 @@ import Aos from 'aos'
 
 import 'aos/dist/aos.css'
 
-import { Navigation, Hero } from './components'
+import { Navigation, Hero, Ratings } from './components'
 
 function App() {
   useEffect(() => {
@@ -11,10 +11,12 @@ function App() {
   })
 
   return (
-    <div className="bg-gradient-to-b from-orange-100 w-screen h-screen overflow-x-hidden">
+    <div className="bg-gradient-to-bl from-orange-200 w-screen h-screen overflow-x-hidden">
       <Navigation />
 
       <Hero />
+
+      <Ratings />
     </div>
   )
 }

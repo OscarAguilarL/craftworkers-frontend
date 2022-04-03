@@ -5,7 +5,7 @@ import { Searchbar } from './Searchbar'
 
 export const Hero: FC = () => {
   return (
-    <div className="container mx-auto px-32 pr-12 flex items-center">
+    <div className="container mx-auto mb-20 px-32 pr-12 flex items-center">
       <div className="flex flex-col gap-12 items-start">
         <h1 className="text-6xl font-bold">
           Encuentra al profesional del oficio que necesitas
