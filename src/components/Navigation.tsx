@@ -3,6 +3,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { Button } from './'
 
 import logoCraftWorkers from '../assets/img/logo.png'
+import { useNavigate } from 'react-router'
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
@@ -10,6 +11,7 @@ function classNames(...classes: any[]) {
 
 export const Navigation: FC = () => {
   const [isLoggedIn] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <nav className="bg-white shadow-md">
@@ -18,9 +20,10 @@ export const Navigation: FC = () => {
           <div className="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               <img
-                className="block h-10 w-auto"
+                className="block h-10 w-auto cursor-pointer"
                 src={logoCraftWorkers}
                 alt="Workflow"
+                onClick={() => navigate('/')}
               />
               {/* <h1 className="ml-6 font-bold text-gray-800">CraftWorkers</h1> */}
             </div>
@@ -93,8 +96,12 @@ export const Navigation: FC = () => {
               </Menu>
             ) : (
               <div className="flex gap-3">
-                <Button isPrimary>Iniciar Sesión</Button>
-                <Button isPrimary={false}>Regístrate</Button>
+                <Button onClickFn={() => navigate('/login')} isPrimary>
+                  Iniciar Sesión
+                </Button>
+                <Button onClickFn={() => navigate('/register')}>
+                  Regístrate
+                </Button>
               </div>
             )}
           </div>
