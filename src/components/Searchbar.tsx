@@ -1,10 +1,23 @@
 import { FC } from 'react'
 import { SearchIcon, LocationMarkerIcon } from '@heroicons/react/outline'
 import { Button } from './Button'
+import { useNavigate } from 'react-router'
 
-export const Searchbar: FC = () => {
+interface Props {
+  className?: string
+}
+
+export const Searchbar: FC<Props> = ({ className = '' }) => {
+  const navigate = useNavigate()
+
+  const goToSearch = () => {
+    navigate('/busca')
+  }
+
   return (
-    <div className="flex gap-4 bg-white p-4 shadow-2xl rounded-3xl items-center">
+    <div
+      className={`flex gap-4 justify-between bg-white p-4 shadow-2xl rounded-3xl items-center ${className}`}
+    >
       <div className="border-r-2 flex items-center">
         <SearchIcon className="h-5" />
         <input type="search" placeholder="Busca" className="p-2" />
@@ -15,7 +28,9 @@ export const Searchbar: FC = () => {
         <span className="font-bold">Ciudad de México, México</span>
       </button>
 
-      <Button isPrimary>Buscar</Button>
+      <Button isPrimary onClickFn={goToSearch}>
+        Buscar
+      </Button>
     </div>
   )
 }

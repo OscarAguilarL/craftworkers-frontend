@@ -12,7 +12,7 @@ function App() {
   })
 
   return (
-    <div className="bg-gradient-to-b from-[#FFEFEF] to-transparent w-screen h-screen overflow-x-hidden">
+    <div className="bg-gradient-to-b from-[#FFEFEF] to-transparent w-auto h-screen overflow-x-hidden">
       <Navigation />
 
       <main className="h-auto">
