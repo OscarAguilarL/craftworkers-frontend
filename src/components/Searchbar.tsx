@@ -17,6 +17,7 @@ export const Searchbar: FC<Props> = ({ className = '' }) => {
   return (
     <div
       className={`flex gap-4 justify-between bg-white p-4 shadow-2xl rounded-3xl items-center ${className}`}
+      data-aos="flip-down"
     >
       <div className="border-r-2 flex items-center">
         <SearchIcon className="h-5" />
