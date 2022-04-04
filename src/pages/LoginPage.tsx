@@ -2,7 +2,7 @@ import { Button } from '../components'
 
 export const LoginPage = () => {
   return (
-    <div className="w-full flex items-center justify-center mt-40">
+    <div className="w-full min-h-screen flex items-center justify-center">
       <div className="bg-white w-96 h-auto rounded-lg pt-8 pb-8 px-8 flex flex-col items-center shadow-2xl">
         <h3 className="font-bold text-4xl mb-4">
           Inicia <span className="text-red-600">Sesión</span>
