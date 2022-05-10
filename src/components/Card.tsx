@@ -1,5 +1,6 @@
 import { StarIcon } from '@heroicons/react/solid'
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
   image: string
@@ -20,8 +21,13 @@ export const Card: FC<Props> = ({
   desc,
   fee,
 }) => {
+  const navigate = useNavigate()
+
   return (
-    <div className="max-w-sm w-72 bg-white rounded-3xl shadow-2xl cursor-pointer hover:scale-105 transition-transform active:scale-100">
+    <div
+      onClick={() => navigate('/perfil/1')}
+      className="max-w-sm w-72 bg-white rounded-3xl shadow-2xl cursor-pointer hover:scale-105 transition-transform active:scale-100"
+    >
       <div
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${image}')`,
