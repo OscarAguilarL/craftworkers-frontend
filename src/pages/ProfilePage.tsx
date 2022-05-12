@@ -11,7 +11,7 @@ export const ProfilePage = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="container max-w-5xl mx-auto mt-12 px-3 pb-24">
+    <div className="container max-w-6xl mx-auto mt-12 px-3 pb-24">
       <div className="grid gap-6 grid-cols-3">
         <div className="col-span-2">
           <div className="bg-gray-200 p-12 rounded-3xl mb-12">
@@ -35,7 +35,7 @@ export const ProfilePage = () => {
             </div>
           </div>
         </div>
-        <div className="h-fit rounded-2xl shadow-lg px-6 py-9 flex flex-col gap-6">
+        <div className="bg-white h-fit rounded-2xl shadow-lg px-6 py-9 flex flex-col gap-6">
           <div className="w-full flex flex-col items-center gap-2">
             <div className="h-40 w-40 overflow-hidden rounded-2xl">
               <img
