@@ -1,7 +1,10 @@
 import { StarIcon } from '@heroicons/react/solid'
+import { Button, Card, CardGrid } from '../components'
+
 import insignia from '../assets/img/insignia.svg'
 import trabajador from '../assets/img/trabajador.jpg'
-import { Button } from '../components'
+import userMini from '../assets/img/user-mini.png'
+import { trabajadores } from '../data/trabajadores'
 
 export const ProfilePage = () => {
   return (
@@ -54,6 +57,95 @@ export const ProfilePage = () => {
             Contáctalo
           </Button>
         </div>
+      </div>
+
+      <div className="grid gap-6 grid-cols-3">
+        <div className="col-span-2">
+          <div className="my-12 flex flex-col gap-4">
+            <h2 className="text-3xl font-bold">Sobre mi trabajo</h2>
+            <p className="text-justify">
+              Instalo y mantengo instalaciones eléctricas, tales como la
+              iluminación, la electricidad y la calefacción. Trabajo en una
+              amplia gama de edificios, incluyendo casas, oficinas, fábricas,
+              hospitales y centrales eléctricas.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <h2 className="text-3xl font-bold">Opiniones</h2>
+
+            {[1, 2, 3].map(() => (
+              <div className="w-full p-6 mb-4 rounded-2xl shadow-xl flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <div className="flex gap-2 items-center">
+                    <img
+                      src={userMini}
+                      alt="Avatar de usuario"
+                      className="w-10"
+                    />
+                    <p className="font-bold">María</p>
+                  </div>
+                  <div className="flex gap-2 items-center bg-red-100 rounded-full px-2 py-0">
+                    <StarIcon className="h-5 text-yellow-500" /> 5
+                  </div>
+                </div>
+                <p>
+                  <span className="font-bold">¡Perfecto!</span> Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Libero explicabo
+                  adipisci autem molestiae modi dignissimos esse ut, minima vel
+                  nihil amet beatae possimus saepe incidunt officia hic aperiam
+                  ipsum reiciendis.
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-4 mt-16">
+            <h2 className="text-3xl font-bold">Recomendaciones externas</h2>
+
+            {[1, 2, 3].map(() => (
+              <div className="w-full p-6 mb-4 rounded-2xl shadow-xl flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <div className="flex gap-2 items-center">
+                    <img
+                      src={userMini}
+                      alt="Avatar de usuario"
+                      className="w-10"
+                    />
+                    <p className="font-bold">María</p>
+                  </div>
+                </div>
+                <p>
+                  <span className="font-bold">¡Perfecto!</span> Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Libero explicabo
+                  adipisci autem molestiae modi dignissimos esse ut, minima vel
+                  nihil amet beatae possimus saepe incidunt officia hic aperiam
+                  ipsum reiciendis.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4 mt-16">
+        <h2 className="text-3xl font-bold mb-6">
+          Acá hay más trabajadores que te pueden interesar
+        </h2>
+
+        <CardGrid className="grid-cols-3 gap-8">
+          {trabajadores.slice(0, 3).map((trabajador, index) => (
+            <Card
+              key={index}
+              image={trabajador.image}
+              name={trabajador.name}
+              location={trabajador.location}
+              stars={trabajador.stars}
+              reviews={trabajador.reviews}
+              desc={trabajador.desc}
+              fee={trabajador.fee}
+            />
+          ))}
+        </CardGrid>
       </div>
     </div>
   )
