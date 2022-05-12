@@ -1,24 +1,29 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Aos from 'aos'
 
 import 'aos/dist/aos.css'
 
-import { Navigation, Hero, Ratings, Tutorial } from './components'
+import { Navigation } from './components'
 import { AppRouter } from './router'
+import { SessionContext } from './context/sessionContext'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
   useEffect(() => {
     Aos.init()
   })
 
   return (
-    <div className="bg-gradient-to-b from-[#FFEFEF] to-transparent w-auto h-screen overflow-x-hidden">
-      <Navigation />
+    <SessionContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+      <div className="bg-gradient-to-b from-[#FFEFEF] to-transparent w-auto h-screen overflow-x-hidden">
+        <Navigation />
 
-      <main className="h-auto">
-        <AppRouter />
-      </main>
-    </div>
+        <main className="h-auto">
+          <AppRouter />
+        </main>
+      </div>
+    </SessionContext.Provider>
   )
 }
 
