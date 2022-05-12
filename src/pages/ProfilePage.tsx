@@ -5,8 +5,11 @@ import insignia from '../assets/img/insignia.svg'
 import trabajador from '../assets/img/trabajador.jpg'
 import userMini from '../assets/img/user-mini.png'
 import { trabajadores } from '../data/trabajadores'
+import { useNavigate } from 'react-router-dom'
 
 export const ProfilePage = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="container max-w-5xl mx-auto mt-12 px-3 pb-24">
       <div className="grid gap-6 grid-cols-3">
@@ -53,7 +56,11 @@ export const ProfilePage = () => {
             <span>Tarifa por hora</span>
             <span>$450</span>
           </p>
-          <Button isPrimary className="w-full">
+          <Button
+            isPrimary
+            className="w-full"
+            onClickFn={() => navigate('/contrato/1')}
+          >
             Contáctalo
           </Button>
         </div>
