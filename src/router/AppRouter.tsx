@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import {
   ContratoPage,
+  FinishProcessPage,
   HomePage,
   LoginPage,
   ProfilePage,
@@ -17,6 +18,7 @@ export const AppRouter = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/perfil/:profileId" element={<ProfilePage />} />
       <Route path="/contrato/:profileId" element={<ContratoPage />} />
+      <Route path="/finished" element={<FinishProcessPage />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   )

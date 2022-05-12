@@ -1,8 +1,11 @@
 import { StarIcon } from '@heroicons/react/solid'
+import { useNavigate } from 'react-router-dom'
 import trabajador from '../assets/img/trabajador.jpg'
 import { Button } from '../components'
 
 export const ContratoPage = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="container max-w-6xl mx-auto mt-12 px-3 pb-24">
       <div className="grid gap-6 grid-cols-3">
@@ -24,7 +27,7 @@ export const ContratoPage = () => {
         </div>
 
         <div className="col-span-2">
-          <form className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <h2 className="text-4xl font-bold">Contáctalo</h2>
             <p>Completa la solicitud para Oscar</p>
 
@@ -96,11 +99,15 @@ export const ContratoPage = () => {
                   </div>
                 </div>
               </div>
-              <Button isPrimary className="w-fit">
+              <Button
+                isPrimary
+                className="w-fit"
+                onClickFn={() => navigate('/finished')}
+              >
                 Enviar Información
               </Button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
