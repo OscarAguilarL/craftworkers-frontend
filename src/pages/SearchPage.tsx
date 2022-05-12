@@ -4,8 +4,6 @@ import { trabajadores } from '../data/trabajadores'
 export const SearchPage = () => {
   return (
     <div className="container max-w-5xl mx-auto mt-12 px-3 pb-24">
-      <Searchbar className="mb-20" />
-
       <h1 className="text-4xl font-bold mb-16" data-aos="flip-left">
         708 trabajadores <br />
         especialistas cerca de tu casa
